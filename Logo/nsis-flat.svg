@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g id="NSIS">
+	<polygon points="485.68,468.291 485.68,254.378 374.756,361.328"/>
+	<polygon points="485.68,223.08 485.68,9.167 374.756,116.117"/>
+	<polygon points="221.857,0 0,0 110.931,106.952"/>
+	<polygon points="238.087,229.564 349.021,122.601 127.164,122.601"/>
+	<polygon points="349.021,109.639 238.087,2.686 127.164,109.639"/>
+	<polygon points="365.249,352.163 476.172,245.208 254.318,245.208"/>
+	<polygon points="476.175,232.245 365.249,125.284 254.318,232.245"/>
+	<polygon points="26.317,43.711 26.317,257.628 137.244,150.67"/>
+	<polygon points="26.317,288.926 26.317,502.835 137.244,395.889"/>
+	<polygon points="401.067,405.052 290.145,512 512,512"/>
+	<polygon points="273.913,282.447 162.981,389.408 384.841,389.408"/>
+	<polygon points="162.981,402.372 273.913,509.319 384.838,402.372"/>
+	<polygon points="146.749,159.837 35.825,266.796 257.684,266.796"/>
+	<polygon points="35.825,279.764 146.749,386.72 257.684,279.764"/>
+</g>
+</svg>
