@@ -1,0 +1,1 @@
+# nsis-logo-v3
