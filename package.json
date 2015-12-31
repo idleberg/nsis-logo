@@ -1,0 +1,17 @@
+{
+  "name": "nsis-logo-v3",
+  "version": "1.0.0",
+  "author": "Jan T. Sott",
+  "license": "CC-BY-NC-SA-4.0",
+  "private": true,
+  "homepage": "http://github.com/idleberg/nsis-logo-v3",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-debug": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-raster": "^0.1.0",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-watch": "^4.2.4"
+  }
+}
