@@ -1,3 +1,4 @@
+// Load dependencies
 var watch    = require('gulp-watch');
 var cache    = require('gulp-cached');
 var debug    = require('gulp-debug');
@@ -6,9 +7,12 @@ var raster   = require('gulp-raster');
 var rename   = require('gulp-rename');
 var svgmin   = require('gulp-svgmin');
 
+// Tasks
 gulp.task('generate', ['generate:svg', 'generate:png']);
 
-var __svg = [
+
+// Global Variable
+const __svg = [
     'src/**/*.svg'
 ];
 
