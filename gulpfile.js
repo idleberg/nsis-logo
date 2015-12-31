@@ -22,7 +22,7 @@ gulp.task('generate:svg', function() {
     .pipe(cache('generate:svg'))
     .pipe(debug({title: 'svgmin:'}))
     .pipe(svgmin())
-    .pipe(gulp.dest('build/svg/'));
+    .pipe(gulp.dest('build/'));
 });
 
 // Convert SVG to PNG
@@ -32,7 +32,7 @@ gulp.task('generate:png', function () {
     .pipe(debug({title: 'raster:'}))
     .pipe(raster({format: 'png'}))
     .pipe(rename({extname: '.png'}))
-    .pipe(gulp.dest('build/png/'));
+    .pipe(gulp.dest('build/'));
 });
 
 // Watch task
