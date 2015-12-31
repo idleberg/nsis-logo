@@ -9,8 +9,7 @@ var svgmin   = require('gulp-svgmin');
 gulp.task('generate', ['generate:svg', 'generate:png']);
 
 var __svg = [
-    'src/Logo/*.svg',
-    'src/Windows/*.svg'
+    'src/**/*.svg'
 ];
 
 // SVG Minification
@@ -34,8 +33,5 @@ gulp.task('generate:png', function () {
 
 // Watch task
 gulp.task('watch', function () {
- gulp.watch([
-    'src/**/*.svg'
-    ],
-    ['generate']);
+    gulp.watch(__svg,['generate']);
 });
