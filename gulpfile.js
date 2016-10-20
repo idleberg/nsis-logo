@@ -1,19 +1,26 @@
 // Load dependencies
-var watch    = require('gulp-watch');
-var cache    = require('gulp-cached');
-var debug    = require('gulp-debug');
-var gulp     = require('gulp');
-var raster   = require('gulp-raster');
-var rename   = require('gulp-rename');
-var svgmin   = require('gulp-svgmin');
+const watch    = require('gulp-watch');
+const cache    = require('gulp-cached');
+const debug    = require('gulp-debug');
+const gulp     = require('gulp');
+const raster   = require('gulp-raster');
+const rename   = require('gulp-rename');
+const svgmin   = require('gulp-svgmin');
+const xmlval   = require('gulp-xml-validator');
 
 // Tasks
 gulp.task('generate', ['generate:svg', 'generate:png']);
+gulp.task('lint', ['lint:xml']);
 
 
 // Global Variable
 const __svg = [
     'src/**/*.svg'
+];
+
+const __xml = [
+    'src/**/*.svg',
+    'src/**/*.xml'
 ];
 
 // SVG Minification
@@ -38,4 +45,11 @@ gulp.task('generate:png', function () {
 // Watch task
 gulp.task('watch', function () {
     gulp.watch(__svg,['generate']);
+});
+
+// Validate XML
+gulp.task('lint:xml', function() {
+  return gulp.src(__xml)
+    .pipe(debug({title: 'lint:xml'}))
+    .pipe(xmlval  ());
 });

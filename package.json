@@ -8,14 +8,14 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-xml-validator": "^1.1.1",
     "gulp": "^3.9.0",
     "gulp-cached": "^1.1.0",
     "gulp-debug": "^2.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-raster": "^0.1.0",
     "gulp-svgmin": "^1.1.2",
-    "gulp-watch": "^4.2.4"
+    "gulp-watch": "^4.2.4",
+    "gulp-xml-validator": "^0.1.1"
   },
   "scripts": {
     "test": "grunt lint --verbose"
