@@ -13,7 +13,7 @@ gulp.task('generate', ['generate:svg', 'generate:png']);
 gulp.task('lint', ['lint:xml']);
 
 
-// Global Variable
+// Files
 const __svg = [
     'src/**/*.svg'
 ];
@@ -51,5 +51,5 @@ gulp.task('watch', function () {
 gulp.task('lint:xml', function() {
   return gulp.src(__xml)
     .pipe(debug({title: 'lint:xml'}))
-    .pipe(xmlval  ());
+    .pipe(xmlval());
 });
