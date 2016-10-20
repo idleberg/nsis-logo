@@ -8,6 +8,7 @@ const rename   = require('gulp-rename');
 const svgmin   = require('gulp-svgmin');
 const xmlval   = require('gulp-xml-validator');
 
+
 // Tasks
 gulp.task('generate', ['generate:svg', 'generate:png']);
 gulp.task('lint', ['lint:xml']);
@@ -18,10 +19,6 @@ const __svg = [
     'src/**/*.svg'
 ];
 
-const __xml = [
-    'src/**/*.svg',
-    'src/**/*.xml'
-];
 
 // SVG Minification
 gulp.task('generate:svg', function() {
@@ -49,7 +46,7 @@ gulp.task('watch', function () {
 
 // Validate XML
 gulp.task('lint:xml', function() {
-  return gulp.src(__xml)
+  return gulp.src(__svg)
     .pipe(debug({title: 'lint:xml'}))
     .pipe(xmlval());
 });
