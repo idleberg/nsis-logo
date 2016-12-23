@@ -1,3 +1,3 @@
 # NSIS Logo
 
-![Screenshot](https://raw.githubusercontent.com/idleberg/nsis-logo-v3/master/src/Logo/transparent.svg)
+![Screenshot](https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/img/logo.svg)
