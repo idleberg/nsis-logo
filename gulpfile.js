@@ -1,11 +1,11 @@
 // Load dependencies
-const watch  = require('gulp-watch');
 const cache  = require('gulp-cached');
 const debug  = require('gulp-debug');
 const gulp   = require('gulp');
 const raster = require('gulp-raster');
 const rename = require('gulp-rename');
 const svgmin = require('gulp-svgmin');
+const watch  = require('gulp-watch');
 const xmlval = require('gulp-xml-validator');
 
 // Files
