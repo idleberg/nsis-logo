@@ -8,45 +8,50 @@ const rename   = require('gulp-rename');
 const svgmin   = require('gulp-svgmin');
 const xmlval   = require('gulp-xml-validator');
 
-
-// Tasks
-gulp.task('generate', ['generate:svg', 'generate:png']);
-gulp.task('lint', ['lint:xml']);
-
-
 // Files
-const __svg = [
+const svgFiles = [
     'src/**/*.svg'
 ];
 
-
 // SVG Minification
-gulp.task('generate:svg', function() {
-    return gulp.src(__svg)
+gulp.task('generate:svg', gulp.series( (done) => {
+    return gulp.src(svgFiles)
     .pipe(cache('generate:svg'))
     .pipe(debug({title: 'svgmin:'}))
     .pipe(svgmin())
     .pipe(gulp.dest('build/'));
-});
+
+    done();
+}));
 
 // Convert SVG to PNG
-gulp.task('generate:png', function () {
-    return gulp.src(__svg)
+gulp.task('generate:png', gulp.series( (done) => {
+    return gulp.src(svgFiles)
     .pipe(cache('generate:png'))
     .pipe(debug({title: 'raster:'}))
     .pipe(raster({format: 'png'}))
     .pipe(rename({extname: '.png'}))
     .pipe(gulp.dest('build/'));
-});
+
+    done();
+}));
 
 // Watch task
-gulp.task('watch', function () {
-    gulp.watch(__svg,['generate']);
-});
+gulp.task('watch:svg', gulp.series( (done) => {
+    gulp.watch(svgFiles, gulp.series('generate:svg'));
+
+    done();
+}));
 
 // Validate XML
-gulp.task('lint:xml', function() {
-  return gulp.src(__svg)
+gulp.task('lint:xml', gulp.series( (done) => {
+  return gulp.src(svgFiles)
     .pipe(debug({title: 'lint:xml'}))
     .pipe(xmlval());
-});
+
+    done();
+}));
+
+// Available tasks
+gulp.task('generate', gulp.parallel('generate:svg'));
+gulp.task('watch', gulp.parallel('watch:svg'));

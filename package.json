@@ -6,7 +6,7 @@
   "private": true,
   "homepage": "http://github.com/idleberg/nsis-logo-v3",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cached": "^1.1.0",
     "gulp-debug": "^2.1.0",
     "gulp-raster": "^0.1.0",
