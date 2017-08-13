@@ -24,7 +24,7 @@ gulp.task('build:svg', gulp.series( done => {
     done();
 }));
 
-Convert SVG to PNG
+// Convert SVG to PNG
 gulp.task('build:png', gulp.series( done => {
     return gulp.src(svgFiles)
     .pipe(cache('build:png'))
