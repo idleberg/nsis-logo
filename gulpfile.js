@@ -14,9 +14,9 @@ const svgFiles = [
 ];
 
 // SVG Minification
-gulp.task('generate:svg', gulp.series( (done) => {
+gulp.task('build:svg', gulp.series( done => {
     return gulp.src(svgFiles)
-    .pipe(cache('generate:svg'))
+    .pipe(cache('build:svg'))
     .pipe(debug({title: 'svgmin:'}))
     .pipe(svgmin())
     .pipe(gulp.dest('build/'));
@@ -25,9 +25,9 @@ gulp.task('generate:svg', gulp.series( (done) => {
 }));
 
 // Convert SVG to PNG
-gulp.task('generate:png', gulp.series( (done) => {
+gulp.task('build:png', gulp.series( done => {
     return gulp.src(svgFiles)
-    .pipe(cache('generate:png'))
+    .pipe(cache('build:png'))
     .pipe(debug({title: 'raster:'}))
     .pipe(raster({format: 'png'}))
     .pipe(rename({extname: '.png'}))
@@ -37,14 +37,14 @@ gulp.task('generate:png', gulp.series( (done) => {
 }));
 
 // Watch task
-gulp.task('watch:svg', gulp.series( (done) => {
-    gulp.watch(svgFiles, gulp.series('generate:svg'));
+gulp.task('watch:svg', gulp.series( done => {
+    gulp.watch(svgFiles, gulp.series('build:svg'));
 
     done();
 }));
 
 // Validate XML
-gulp.task('lint:xml', gulp.series( (done) => {
+gulp.task('lint:xml', gulp.series( done => {
   return gulp.src(svgFiles)
     .pipe(debug({title: 'lint:xml'}))
     .pipe(xmlval());
@@ -53,5 +53,5 @@ gulp.task('lint:xml', gulp.series( (done) => {
 }));
 
 // Available tasks
-gulp.task('generate', gulp.parallel('generate:svg'));
+gulp.task('build', gulp.parallel('build:svg'));
 gulp.task('watch', gulp.parallel('watch:svg'));

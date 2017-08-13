@@ -16,7 +16,7 @@
     "gulp-xml-validator": "^0.1.1"
   },
   "scripts": {
-    "postinstall": "gulp generate",
+    "postinstall": "gulp build",
     "test": "gulp lint"
   }
 }
