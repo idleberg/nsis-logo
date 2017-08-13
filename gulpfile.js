@@ -2,7 +2,7 @@
 const cache  = require('gulp-cached');
 const debug  = require('gulp-debug');
 const gulp   = require('gulp');
-const raster = require('gulp-raster');
+// const raster = require('gulp-raster');
 const rename = require('gulp-rename');
 const svgmin = require('gulp-svgmin');
 const watch  = require('gulp-watch');
@@ -25,16 +25,16 @@ gulp.task('build:svg', gulp.series( done => {
 }));
 
 // Convert SVG to PNG
-gulp.task('build:png', gulp.series( done => {
-    return gulp.src(svgFiles)
-    .pipe(cache('build:png'))
-    .pipe(debug({title: 'raster:'}))
-    .pipe(raster({format: 'png'}))
-    .pipe(rename({extname: '.png'}))
-    .pipe(gulp.dest('build/'));
+// gulp.task('build:png', gulp.series( done => {
+//     return gulp.src(svgFiles)
+//     .pipe(cache('build:png'))
+//     .pipe(debug({title: 'raster:'}))
+//     .pipe(raster({format: 'png'}))
+//     .pipe(rename({extname: '.png'}))
+//     .pipe(gulp.dest('build/'));
 
-    done();
-}));
+//     done();
+// }));
 
 // Watch task
 gulp.task('watch:svg', gulp.series( done => {
