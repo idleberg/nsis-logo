@@ -56,4 +56,5 @@ gulp.task('lint:xml', gulp.series( done => {
 
 // Available tasks
 gulp.task('build', gulp.parallel('build:svg'));
+gulp.task('lint', gulp.parallel('lint:xml'));
 gulp.task('watch', gulp.parallel('watch:svg'));
