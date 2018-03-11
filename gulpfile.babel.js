@@ -1,21 +1,23 @@
+'use strict';
+
 // Load dependencies
-const cache  = require('gulp-cached');
-const debug  = require('gulp-debug');
-const gulp   = require('gulp');
-const raster = require('gulp-raster');
-const rename = require('gulp-rename');
-const svgmin = require('gulp-svgmin');
-const watch  = require('gulp-watch');
-const xmlval = require('gulp-xml-validator');
+import cache from 'gulp-cached';
+import debug from 'gulp-debug';
+import gulp from 'gulp';
+import raster from 'gulp-raster';
+import rename from 'gulp-rename';
+import svgmin from 'gulp-svgmin';
+import watch from 'gulp-watch';
+import xmlval from 'gulp-xml-validator';
 
 // Files
 const svgFiles = [
-    'src/**/*.svg'
+  'src/**/*.svg'
 ];
 
 // SVG Minification
 gulp.task('build:svg', gulp.series( done => {
-    return gulp.src(svgFiles)
+  gulp.src(svgFiles)
     .pipe(cache('build:svg'))
     .pipe(debug({title: 'svgmin:'}))
     .pipe(svgmin())
@@ -26,21 +28,21 @@ gulp.task('build:svg', gulp.series( done => {
 
 // Convert SVG to PNG
 gulp.task('build:png', gulp.series( done => {
-    return gulp.src(svgFiles)
+  gulp.src(svgFiles)
     .pipe(cache('build:png'))
     .pipe(debug({title: 'raster:'}))
     .pipe(raster({format: 'png'}))
     .pipe(rename({extname: '.png'}))
     .pipe(gulp.dest('dist/'));
 
-    done();
+  done();
 }));
 
 // Watch task
 gulp.task('watch:svg', gulp.series( done => {
-    gulp.watch(svgFiles, gulp.series('build:svg'));
+  gulp.watch(svgFiles, gulp.series('build:svg'));
 
-    done();
+  done();
 }));
 
 // Validate XML
@@ -49,7 +51,7 @@ gulp.task('lint:xml', gulp.series( done => {
     .pipe(debug({title: 'lint:xml'}))
     .pipe(xmlval());
 
-    done();
+  done();
 }));
 
 // Available tasks
