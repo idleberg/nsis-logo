@@ -1,6 +1,6 @@
 {
   "name": "@nsis/logo",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "author": "Jan T. Sott",
   "private": false,
   "license": "CC-BY-NC-SA-4.0",
@@ -13,9 +13,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/idleberg/nsis-logo-v3"
+    "url": "https://github.com/idleberg/nsis-logo"
   },
-  "homepage": "http://github.com/idleberg/nsis-logo-v3",
+  "homepage": "http://github.com/idleberg/nsis-logo",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
