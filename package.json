@@ -4,15 +4,15 @@
   "author": "Jan T. Sott",
   "license": "CC-BY-NC-SA-4.0",
   "keywords": [
-      "nsis"
+    "nsis"
   ],
   "scripts": {
     "build": "yarn build",
     "test": "gulp lint"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/idleberg/nsis-logo-v3"
+    "type": "git",
+    "url": "https://github.com/idleberg/nsis-logo-v3"
   },
   "homepage": "http://github.com/idleberg/nsis-logo-v3",
   "devDependencies": {
