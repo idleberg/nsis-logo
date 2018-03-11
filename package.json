@@ -3,6 +3,17 @@
   "version": "0.0.0",
   "author": "Jan T. Sott",
   "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+      "nsis"
+  ],
+  "scripts": {
+    "build": "yarn build",
+    "test": "gulp lint"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/idleberg/nsis-logo-v3"
+  },
   "homepage": "http://github.com/idleberg/nsis-logo-v3",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -15,9 +26,6 @@
     "gulp-svgmin": "^1.1.2",
     "gulp-watch": "^4.2.4",
     "gulp-xml-validator": "^0.1.1"
-  },
-  "scripts": {
-    "test": "gulp lint"
   },
   "babel": {
     "presets": [
